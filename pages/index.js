@@ -10,7 +10,7 @@ useEffect(()=>{
 
   return (<>
     <Paper variant="outlined" style={{height:"100em",backgroundColor:"green"}}>
-      <h1>WELCOME</h1>
+      <h1>WELCOME You</h1>
     </Paper>
     
   </>
