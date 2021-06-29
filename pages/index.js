@@ -2,8 +2,11 @@ import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import {useUser} from '@auth0/nextjs-auth0';
 
-export default function Home({user}) {
+export default function Home() {
+
+  const {user} = useUser();
 
   return (<>
     <Paper variant="outlined" style={{height:"43em",backgroundColor:"#F7DBF0"}}>
