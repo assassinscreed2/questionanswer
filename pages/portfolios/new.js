@@ -3,6 +3,7 @@ import {usePostQuestion} from 'actions/postQuestion'
 import {useUser} from '@auth0/nextjs-auth0';
 import { useEffect } from 'react';
 import {useRouter} from 'next/router'
+import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 //import {useRouter} from 'next/router'
 
 const NewQuestion = () =>{
@@ -24,3 +25,5 @@ const [postQuestion,{data,error,loading}] = usePostQuestion()
 }
 
 export default NewQuestion
+
+export const getServerSideProps = withPageAuthRequired();
